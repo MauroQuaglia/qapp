@@ -1,0 +1,2 @@
+* Ho dovuto aggiungere puma perché con ruby 3 il Webrick che era il default non viene più messo e serve specificarne uno.
+  * Capire le configurazioni di puma.

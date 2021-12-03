@@ -82,6 +82,8 @@ GEM
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
+    puma (5.5.2)
+      nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -132,10 +134,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  puma
   rails
 
-RUBY VERSION
-   ruby 2.7.2p137
-
 BUNDLED WITH
-   2.1.4
+   2.2.22
