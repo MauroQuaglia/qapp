@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails'
-gem 'puma'
+gem 'webrick'
+gem 'sass-rails'
+gem 'uglifier'
 
 =begin
 group(:development) do
