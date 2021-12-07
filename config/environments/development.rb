@@ -6,9 +6,6 @@ Rails.application.configure do
 
   Gem::Rails.development(config)
 
-  # Do not eager load code on boot.
-  config.eager_load = false
-
   # Show full error reports.
   config.consider_all_requests_local = true
 
