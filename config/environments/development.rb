@@ -5,8 +5,6 @@ Rails.application.configure do
   Gem::Rails.development(config)
   Gem::Actionpack.development(config)
 
-
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
