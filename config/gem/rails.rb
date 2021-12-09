@@ -6,6 +6,9 @@ class Gem::Rails
     config.consider_all_requests_local = false
     config.log_level = :warn
     config.log_tags = [:request_id]
+    config.log_formatter = ::Logger::Formatter.new
+    config.i18n.fallbacks = false
+    config.i18n.raise_on_missing_translations = false
   end
 
   def self.development(config)
@@ -14,6 +17,9 @@ class Gem::Rails
     config.consider_all_requests_local = true # Show full error reports.
     config.log_level = :info
     config.log_tags = [:request_id]
+    config.log_formatter = ::Logger::Formatter.new
+    config.i18n.fallbacks = false
+    config.i18n.raise_on_missing_translations = true
   end
 
   def self.test(config)
@@ -22,6 +28,9 @@ class Gem::Rails
     config.consider_all_requests_local = true
     config.log_level = :warn
     config.log_tags = nil
+    config.log_formatter = ::Logger::Formatter.new
+    config.i18n.fallbacks = false
+    config.i18n.raise_on_missing_translations = true
   end
 
 end

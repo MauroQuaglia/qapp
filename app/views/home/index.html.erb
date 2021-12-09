@@ -6,6 +6,7 @@
   MQ7ddddddddldklòdkdlòkddlòdldllòàl
 </span>
 
+<%= I18n.t('title2') %>
 
 <p>
   cache: <%= Rails.cache.fetch('mq', expires_in: 2.hours) { Time.now } %>
