@@ -6,6 +6,11 @@
   MQ7ddddddddldklòdkdlòkddlòdldllòàl
 </span>
 
+
+<p>
+  cache: <%= Rails.cache.fetch('mq', expires_in: 2.hours) { Time.now } %>
+</p>
+
 <div>
   <%= image_tag('home/mr_q.png', alt: 'MQ') %>
 </div>

@@ -1,5 +1,6 @@
 require_relative './gem/rails'
 require_relative './gem/sass_rails'
+require_relative './gem/actionpack'
 
 require_relative "boot"
 
