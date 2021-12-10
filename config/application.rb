@@ -1,6 +1,7 @@
 require_relative './gem/rails'
 require_relative './gem/sass_rails'
 require_relative './gem/actionpack'
+require_relative './gem/activesupport'
 
 require_relative "boot"
 
@@ -38,5 +39,9 @@ module Qapp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+  end
+
+  def ciao
+    'ddjkdj'
   end
 end
