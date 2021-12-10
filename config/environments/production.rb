@@ -1,8 +1,5 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  Gem::Rails.production(config)
-  Gem::Actionpack.production(config)
-  Gem::ActiveSupport.production(config)
-  Gem::SassRails.production(config)
+  [Gem::Rails, Gem::Actionpack, Gem::ActiveSupport, Gem::SassRails].each { |gem| gem.production(config) }
 end
