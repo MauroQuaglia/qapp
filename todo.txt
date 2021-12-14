@@ -1,2 +1,6 @@
 * Provare a creare un solo link per css e js, mattendo i vari include nei file home.
 * Sistemare i nomi delle gemme nella configurazione, perché li ho messi tutti sotto rails.
+
+
+* La catena di chiamate è:
+boot.rb -> application.rb -> config.ru -> environment.rb -> development.rb (production|test) -> initializer[1..n]
