@@ -2,5 +2,5 @@
 * Sistemare i nomi delle gemme nella configurazione, perché li ho messi tutti sotto rails.
 
 
-* La catena di chiamate è:
+* La catena di chiamate è (da quella chiamata per prima all'ultima):
 boot.rb -> application.rb -> config.ru -> environment.rb -> development.rb (production|test) -> initializer[1..n]
