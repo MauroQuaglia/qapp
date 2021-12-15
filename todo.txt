@@ -2,3 +2,8 @@
 
 * La catena di chiamate è (da quella chiamata per prima all'ultima):
 boot.rb -> application.rb -> config.ru -> environment.rb -> development.rb (production|test) -> initializer[1..n]
+
+
+Gemma:
+https://relishapp.com/rspec
+--warnings in .rspec

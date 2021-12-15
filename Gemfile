@@ -6,6 +6,11 @@ gem 'webrick'
 gem 'sass-rails'
 gem 'uglifier'
 
+group(:test) do
+  gem('rspec-rails')
+  gem('capybara')
+end
+
 =begin
 group(:development) do
   gem 'thin'
