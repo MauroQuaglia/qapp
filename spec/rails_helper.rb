@@ -15,6 +15,7 @@ RSpec.configure do |config|
   
   config.order = :random
   config.use_active_record = false
+  config.formatter = :progress
 
   # If you enable ActiveRecord support you should unncomment these lines,
   # note if you'd prefer not to run each example within a transaction, you
