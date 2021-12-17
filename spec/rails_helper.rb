@@ -17,6 +17,8 @@ RSpec.configure do |config|
   config.use_active_record = false
   config.formatter = :progress
 
+  Capybara.server = :puma
+
   # If you enable ActiveRecord support you should unncomment these lines,
   # note if you'd prefer not to run each example within a transaction, you
   # should set use_transactional_fixtures to false.

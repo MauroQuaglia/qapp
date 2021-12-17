@@ -1,18 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails'
+gem 'rails', '6.1.4.1'
 gem 'webrick'
 gem 'sass-rails'
 gem 'uglifier'
+gem 'puma'
 
 group(:test) do
   gem('rspec-rails')
   gem('capybara')
+  gem('selenium-webdriver', '2.53.4')
 end
-
-=begin
-group(:development) do
-  gem 'thin'
-end
-=end
