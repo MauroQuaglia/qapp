@@ -2,6 +2,17 @@ ENV['RAILS_ENV'] = 'test'
 
 require File.expand_path('../config/environment', __dir__)
 require 'rspec/rails'
+require 'capybara'
+require 'capybara/rails'
+require 'capybara/dsl'
+require "selenium-webdriver"
+
+Capybara.server = :puma
+Capybara.default_driver = :rack_test
+
+Capybara.register_driver(:firefox) do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+end
 
 if Rails.env.production?
   abort("The Rails environment is running in production mode!")
@@ -12,12 +23,10 @@ RSpec.configure do |config|
   config.mock_with(:rspec) do |mocks|
     mocks.verify_partial_doubles = true
   end
-  
+
   config.order = :random
   config.use_active_record = false
   config.formatter = :progress
-
-  Capybara.server = :puma
 
   # If you enable ActiveRecord support you should unncomment these lines,
   # note if you'd prefer not to run each example within a transaction, you
