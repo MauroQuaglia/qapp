@@ -1,42 +1,12 @@
-class Gem::Rails
+require 'capybara'
+require 'capybara/rails'
+require 'capybara/dsl'
+require "selenium-webdriver"
 
-  def self.production(config)
-    config.cache_classes = true
-    config.eager_load = true #on boot, in pro per performare meglio subito
-    config.consider_all_requests_local = false
-    config.log_level = :warn
-    config.log_tags = [:request_id]
-    config.log_formatter = ::Logger::Formatter.new
-    config.i18n.fallbacks = false
-    config.i18n.raise_on_missing_translations = false
-    config.action_dispatch.show_exceptions = true
-    config.action_controller.allow_forgery_protection = true
-  end
+Capybara.server = :puma
 
-  def self.development(config)
-    config.cache_classes = false
-    config.eager_load = false #on boot
-    config.consider_all_requests_local = true # Show full error reports.
-    config.log_level = :info
-    config.log_tags = [:request_id]
-    config.log_formatter = ::Logger::Formatter.new
-    config.i18n.fallbacks = false
-    config.i18n.raise_on_missing_translations = true
-    config.action_dispatch.show_exceptions = false
-    config.action_controller.allow_forgery_protection = true
-  end
+Capybara.default_driver = :rack_test
 
-  def self.test(config)
-    config.cache_classes = true
-    config.eager_load = false #on boot, potrebbe non servire per un singolo test
-    config.consider_all_requests_local = true
-    config.log_level = :warn
-    config.log_tags = nil
-    config.log_formatter = ::Logger::Formatter.new
-    config.i18n.fallbacks = false
-    config.i18n.raise_on_missing_translations = true
-    config.action_dispatch.show_exceptions = false
-    config.action_controller.allow_forgery_protection = false
-  end
-
+Capybara.register_driver(:firefox) do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :firefox)
 end
