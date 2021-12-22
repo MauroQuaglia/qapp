@@ -3,6 +3,7 @@
 * La catena di chiamate è (da quella chiamata per prima all'ultima):
 boot.rb -> application.rb -> config.ru -> environment.rb -> development.rb (production|test) -> initializer[1..n]
 
+* spostare sotto support di spec le gemme dei test.
 
 Gemma:
 https://relishapp.com/rspec

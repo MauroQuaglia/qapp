@@ -1,0 +1,30 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 1
+  timeout: 5000
+
+production:
+  <<: *default
+  template: template0
+  database: qapp_production
+  username: xpuser
+  password: qapp
+  host: 127.0.0.1
+
+development:
+  <<: *default
+  template: template0
+  database: qapp_development
+  username: xpuser
+  password: qapp
+  host: 127.0.0.1
+
+test:
+  <<: *default
+  template: template0
+  database: qapp_test
+  username: xpuser
+  password: qapp
+  host: 127.0.0.1
+
