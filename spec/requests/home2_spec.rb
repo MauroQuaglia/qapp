@@ -1,6 +1,6 @@
 require("rails_helper")
 
-describe("Home2", type: :request) do
+describe("Home2") do
 
 
   it("Should return status_code ok") do
