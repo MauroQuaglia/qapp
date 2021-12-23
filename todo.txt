@@ -8,3 +8,11 @@ boot.rb -> application.rb -> config.ru -> environment.rb -> development.rb (prod
 Gemma:
 https://relishapp.com/rspec
 --warnings in .rspec
+
+
+bin/rails generate migration CreateLibrarie
+bin/rails generate migration CreateDocumentations
+rails g model Library --migration=false
+rails g model Documentation --migration=false
+rake db:create (.yml)
+rake db:migrate (migration)

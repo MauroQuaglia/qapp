@@ -27,6 +27,7 @@ Things you may want to cover:
     * `rails new . --skip-namespace --minimal --skip-active-record --skip-puma --skip-sprockets --skip-listen --skip-bundle --skip-test --skip-keeps --skip-webpack-install`
 * Aprire il `Gemfile` e togliere tutte le gemme e lasciare `gem 'rails'`.
 * Fare `bundle update` e poi funziona tutto.
+  
 
 
 
