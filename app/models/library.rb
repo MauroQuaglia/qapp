@@ -1,2 +1,2 @@
-class Library < ApplicationRecord
+class Library < ActiveRecord::Base
 end

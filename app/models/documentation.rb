@@ -1,2 +1,2 @@
-class Documentation < ApplicationRecord
+class Documentation < ActiveRecord::Base
 end
