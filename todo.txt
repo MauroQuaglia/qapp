@@ -9,8 +9,9 @@ Gemma:
 https://relishapp.com/rspec
 --warnings in .rspec
 
+db query matcher e setup database cleanre che non serve
 
-bin/rails generate migration CreateLibrarie
+bin/rails generate migration CreateLibraries
 bin/rails generate migration CreateDocumentations
 rails g model Library --migration=false
 rails g model Documentation --migration=false
