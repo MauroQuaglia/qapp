@@ -9,14 +9,15 @@ RSpec.configure do |config|
   config.order = :random
   config.formatter = :progress
 
-  config.use_active_record = false
+  config.use_active_record = true
+  config.use_transactional_fixtures = true
 
   # If you enable ActiveRecord support you should unncomment these lines,
   # note if you'd prefer not to run each example within a transaction, you
   # should set use_transactional_fixtures to false.
   #
-  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  # config.use_transactional_fixtures = true
+  #config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
