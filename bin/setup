@@ -4,14 +4,15 @@ require "fileutils"
 APP_ROOT = File.expand_path('..', __dir__)
 
 FileUtils.chdir(APP_ROOT) do
-  system('bundle update')
-  system('bundle clean --force')
-  system('bin/rails log:clear')
-  system('bin/rails tmp:clear')
-  system('sudo systemctl stop postgresql')
-  system('sudo systemctl start postgresql')
+  # system('bundle update')
+  # system('bundle clean --force')
+  # system('bin/rails log:clear')
+  # system('bin/rails tmp:clear')
+  #system('sudo systemctl stop postgresql')
+  # system('sudo systemctl start postgresql')
   system('bin/rails db:drop')
   system('bin/rails db:create')
-  system('bin/rails db:migrate')
-  system('bin/rails db:seed')
+  system('bin/rails db:migrate RAILS_ENV=test')
+  system('bin/rails db:migrate RAILS_ENV=development')
+  system('bin/rails db:seed RAILS_ENV=development')
 end
