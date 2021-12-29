@@ -1,3 +1,3 @@
 DBQueryMatchers.configure do |config|
-  config.ignores = [/SHOW TABLES LIKE/]
+  config.ignores = [/SHOW search_path/]
 end
