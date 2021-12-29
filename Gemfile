@@ -12,4 +12,5 @@ group(:test) do
   gem('capybara')
   gem('selenium-webdriver')
   gem('geckodriver-helper')
+  gem('db-query-matchers')
 end

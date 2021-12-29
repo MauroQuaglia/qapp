@@ -7,3 +7,4 @@ end
 
 require_relative('../config/gem/rspec_rails')
 require_relative('../config/gem/capybara')
+require_relative('../config/gem/db_query_matcher')

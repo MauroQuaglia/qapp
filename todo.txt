@@ -17,3 +17,4 @@ rails g model Library --migration=false
 rails g model Documentation --migration=false
 rake db:create (.yml)
 rake db:migrate (migration)
+https://guides.rubyonrails.org/v6.1/

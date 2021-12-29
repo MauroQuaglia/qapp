@@ -10,6 +10,7 @@ class Gem::Rails
     config.i18n.raise_on_missing_translations = false
     config.action_dispatch.show_exceptions = true
     config.action_controller.allow_forgery_protection = true
+    config.active_record.logger = nil
   end
 
   def self.development(config)
@@ -23,6 +24,7 @@ class Gem::Rails
     config.i18n.raise_on_missing_translations = true
     config.action_dispatch.show_exceptions = false
     config.action_controller.allow_forgery_protection = true
+    config.active_record.logger = Logger.new(STDOUT) #Query su db log in console
   end
 
   def self.test(config)
@@ -36,5 +38,6 @@ class Gem::Rails
     config.i18n.raise_on_missing_translations = true
     config.action_dispatch.show_exceptions = false
     config.action_controller.allow_forgery_protection = false
+    config.active_record.logger = nil #Query su db log in console
   end
 end
