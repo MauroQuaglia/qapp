@@ -1,3 +1,3 @@
 DBQueryMatchers.configure do |config|
-  config.ignores = [/SHOW search_path/]
+  config.schemaless = true
 end
