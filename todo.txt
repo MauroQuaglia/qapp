@@ -18,3 +18,6 @@ rails g model Documentation --migration=false
 rake db:create (.yml)
 rake db:migrate (migration)
 https://guides.rubyonrails.org/v6.1/
+
+acchio api VS non-api
+usa gli stessi initializer (middelware) e potrebbe non essere buona cosa.
