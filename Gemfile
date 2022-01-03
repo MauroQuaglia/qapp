@@ -6,6 +6,7 @@ gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'pg'
+gem 'active_model_serializers'
 
 group(:test) do
   gem('rspec-rails')
