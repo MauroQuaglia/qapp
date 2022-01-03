@@ -15,7 +15,7 @@ class Gem::Rails
 
   def self.development(config)
     config.cache_classes = false
-    config.eager_load = false #on boot
+    config.eager_load = true #on boot
     config.consider_all_requests_local = true # Show full error reports.
     config.log_level = :info
     config.log_tags = [:request_id]
