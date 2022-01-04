@@ -12,10 +12,14 @@ class Api::ApiController < ActionController::API
     permitted_params.dig(:include)
   end
 
+  def filters
+    permitted_params.dig(:filter)
+  end
+
   private
 
   def permitted_params
-    params.permit(:include, page: [:size, :number])
+    params.permit(:include, filter: {}, page: [:size, :number])
   end
 
 end
