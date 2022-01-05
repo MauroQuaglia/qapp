@@ -13,7 +13,7 @@ class Api::ApiController < ActionController::API
   end
 
   def filters
-    permitted_params.dig(:filter)
+    permitted_params[:filter]
   end
 
   private
