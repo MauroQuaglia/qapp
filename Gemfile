@@ -7,6 +7,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'pg'
 gem 'active_model_serializers'
+gem 'pagy'
 
 group(:test) do
   gem('rspec-rails')
