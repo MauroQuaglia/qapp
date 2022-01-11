@@ -1,0 +1,43 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Qapp (params in:formData)",
+    "description": "\n<p>Another API description</p>\n",
+    "version": "1.0",
+    "x-copyright": null
+  },
+  "basePath": "/api",
+  "consumes": [
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
+  ],
+  "paths": {
+    "/libraries": {
+      "get": {
+        "tags": [
+          "libraries"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_libraries",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    }
+  },
+  "definitions": {
+  },
+  "tags": [
+
+  ],
+  "host": "localhost:3000"
+}

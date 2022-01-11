@@ -10,8 +10,10 @@ feature("Home") do
     expect(Capybara.current_driver).to eq(:rack_test)
   end
 
+=begin
   scenario("Capybara should use firefox driver", driver: :firefox) do
     expect(Capybara.current_driver).to eq(:firefox)
   end
+=end
 
 end
