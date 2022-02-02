@@ -1,7 +1,5 @@
 class Api::V1::LibrariesController < Api::ApiController
 
-  # http://localhost:3000/apipie
-  api(:GET, '/libraries')
   def index
     libraries = Library.where(filters).includes(:documentations)
     pagy_meta, pagy_libraries = pagy(libraries, page: page_number, items: page_size)

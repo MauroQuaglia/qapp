@@ -8,7 +8,6 @@ gem 'uglifier'
 gem 'pg'
 gem 'active_model_serializers'
 gem 'pagy'
-gem 'apipie-rails'
 
 group(:test) do
   gem('rspec-rails')
