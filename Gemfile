@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '6.1.4.4'
+gem 'rails', '6.1.5'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'pg'
 gem 'active_model_serializers'
 gem 'pagy'
+gem 'rails_admin', '2.2.1'
 
 group(:test) do
   gem('rspec-rails')
