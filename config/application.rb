@@ -2,6 +2,7 @@ require_relative './gem/rails'
 require_relative './gem/sass_rails'
 require_relative './gem/actionpack'
 require_relative './gem/activesupport'
+require_relative './gem/railties'
 
 require_relative "boot"
 
@@ -29,7 +30,8 @@ Bundler.require(*Rails.groups)
 module Qapp
   # https://edgeguides.rubyonrails.org/configuring.html#config-active-support-executor-around-test-case
   class Application < Rails::Application
-    Gem::Actionpack.application(config)
+    [Gem::Railties, Gem::Actionpack].each { |gem| gem.application(config) }
+
     #config.load_defaults(Rails::VERSION::STRING.to_f)
 
     #config.api_only = false

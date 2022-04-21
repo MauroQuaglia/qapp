@@ -3,10 +3,12 @@ class Gem::Actionpack
   def self.application(config)
     config.action_dispatch.default_headers = {
       "X-Frame-Options" => "SAMEORIGIN",
-      "X-XSS-Protection" => "0",
+      "X-XSS-Protection" => "1; mode=block",
       "X-Content-Type-Options" => "nosniff",
       "X-Permitted-Cross-Domain-Policies" => "none",
-      "Referrer-Policy" => "strict-origin-when-cross-origin"
+      "Referrer-Policy" => "strict-origin-when-cross-origin",
+      "Content-Type" => "text/html; charset=utf-8",
+      "Cache-Control" => "max-age=0, private, must-revalidate"
     }
   end
 
