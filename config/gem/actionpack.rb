@@ -10,6 +10,7 @@ class Gem::Actionpack
       "Content-Type" => "text/html; charset=utf-8",
       "Cache-Control" => "max-age=0, private, must-revalidate"
     }
+    # config.action_controller.allow_deprecated_parameters_hash_equality = false nel 6.1 non funziona
   end
 
   def self.production(config)

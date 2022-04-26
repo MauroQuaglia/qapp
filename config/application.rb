@@ -32,6 +32,7 @@ module Qapp
   class Application < Rails::Application
     [Gem::Railties, Gem::Actionpack].each { |gem| gem.application(config) }
 
+
     #config.load_defaults(Rails::VERSION::STRING.to_f)
 
     #config.api_only = false
