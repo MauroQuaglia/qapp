@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root(to: "home#index")
 
+  resources(:authors, only: :index)
+
+  # basta debug controller
   namespace(:debug) do
     get('/alive', to: 'alive#show')
   end

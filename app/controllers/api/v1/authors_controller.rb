@@ -1,4 +1,4 @@
-class Api::V1::BooksController < Api::ApiController
+class Api::V1::AuthorsController < Api::ApiController
 
   def index
     books = Author.where(filters)
