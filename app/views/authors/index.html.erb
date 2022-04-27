@@ -2,7 +2,7 @@
   Autori
 </p>
 
-<% @authors.each do |author| %>
+<% authors.each do |author| %>
   <span>Autore: <%= author.name %></span>
   <% author.books.each do |book| %>
     <div>Libro: <%= book.title %></div>

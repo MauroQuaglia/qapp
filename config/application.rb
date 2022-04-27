@@ -28,10 +28,13 @@ Bundler.require(*Rails.groups)
 #config.active_support.executor_around_test_case
 
 module Qapp
-  # https://edgeguides.rubyonrails.org/configuring.html#config-active-support-executor-around-test-case
+
+
+
+
+  # https://guides.rubyonrails.org/configuring.html#versioned-default-values
   class Application < Rails::Application
     [Gem::Railties, Gem::Actionpack].each { |gem| gem.application(config) }
-
 
     #config.load_defaults(Rails::VERSION::STRING.to_f)
 

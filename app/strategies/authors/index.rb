@@ -5,6 +5,10 @@ class Authors::Index < SimpleDelegator
   end
 
   def execute
-    render(:index, status: :ok)
+    render(
+      :index,
+      locals: { authors: authors },
+      status: :ok
+    )
   end
 end

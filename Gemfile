@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '6.1.5'
+gem 'rails'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'

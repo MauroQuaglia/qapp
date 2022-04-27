@@ -5,6 +5,9 @@ class Authors::NotFound < SimpleDelegator
   end
 
   def execute
-    render(plain: 'Non ci sono autori!', status: :not_found)
+    render(
+      plain: 'Non ci sono autori!',
+      status: :not_found
+    )
   end
 end
