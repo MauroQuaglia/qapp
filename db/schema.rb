@@ -15,23 +15,23 @@ ActiveRecord::Schema.define(version: 2021_12_23_142119) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "documentations", force: :cascade do |t|
-    t.bigint "library_id"
+  create_table "authors", force: :cascade do |t|
     t.string "name"
-    t.string "source"
-    t.text "note"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["library_id"], name: "index_documentations_on_library_id"
-  end
-
-  create_table "libraries", force: :cascade do |t|
-    t.string "name"
-    t.string "source"
-    t.text "note"
+    t.date "date_of_birth"
+    t.string "nationality"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "documentations", "libraries"
+  create_table "books", force: :cascade do |t|
+    t.bigint "author_id"
+    t.string "title"
+    t.date "publication_date"
+    t.text "note"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["author_id"], name: "index_books_on_author_id"
+  end
+
+  add_foreign_key "books", "authors"
 end

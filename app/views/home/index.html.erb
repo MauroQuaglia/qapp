@@ -6,10 +6,10 @@
   cache: <%= Rails.cache.fetch('mq', expires_in: 2.hours) { Time.now } %>
 </p>
 
-<% @libraries.each do |library| %>
-  <span>Library: <%= library.name %></span>
-  <% library.documentations.each do |documentation| %>
-    <div>doc: <%= documentation.name %></div>
+<% @authors.each do |author| %>
+  <span>Author: <%= author.name %></span>
+  <% author.books.each do |book| %>
+    <div>doc: <%= book.name %></div>
   <% end %>
 <% end %>
 

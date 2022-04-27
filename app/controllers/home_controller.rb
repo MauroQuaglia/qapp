@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 
   def index
     @text = 'My QApp'
-    @libraries = Library.all
+    @authors = Author.all
   end
 
 end

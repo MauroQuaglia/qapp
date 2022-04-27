@@ -3,7 +3,7 @@ require("rails_helper")
 describe("Config") do
 
   before do
-    get('/debug/test')
+    get('/')
   end
 
   it("should set action_dispatch.default_headers") do

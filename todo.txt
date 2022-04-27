@@ -12,9 +12,9 @@ https://relishapp.com/rspec
 db query matcher e setup database cleanre che non serve
 
 bin/rails generate migration CreateLibraries
-bin/rails generate migration CreateDocumentations
-rails g model Library --migration=false
-rails g model Documentation --migration=false
+bin/rails generate migration CreateBooks
+rails g model Author --migration=false
+rails g model Book --migration=false
 rake db:create (.yml)
 rake db:migrate (migration)
 https://guides.rubyonrails.org/v6.1/
