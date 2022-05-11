@@ -10,7 +10,7 @@ class Gem::Actionpack
       "Content-Type" => "text/html; charset=utf-8",
       "Cache-Control" => "max-age=0, private, must-revalidate"
     }
-    config.action_controller.raise_on_open_redirects = false
+    #config.action_controller.raise_on_open_redirects = false
   end
 
   def self.production(config)

@@ -21,3 +21,15 @@ https://guides.rubyonrails.org/v6.1/
 
 acchio api VS non-api
 usa gli stessi initializer (middelware) e potrebbe non essere buona cosa.
+
+
+-------------------------------------------------------------------------
+
+LOAD_PATH = AutoloadPAth + gemme
+["/home/xpuser/mauro-quaglia/qapp/app/controllers",
+ "/home/xpuser/mauro-quaglia/qapp/app/helpers",
+ "/home/xpuser/mauro-quaglia/qapp/app/models",
+ "/home/xpuser/mauro-quaglia/qapp/app/serializers",
+ "/home/xpuser/mauro-quaglia/qapp/app/strategies"] + gemme
+
+
