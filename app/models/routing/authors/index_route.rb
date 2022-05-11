@@ -1,4 +1,4 @@
-class Routing::Authors::IndexRoute
+class Routing::Authors::IndexRoute < Routing::RouteBase
 
   def initialize(params)
     @params = params

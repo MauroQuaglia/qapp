@@ -10,7 +10,10 @@ class Gem::Actionpack
       "Content-Type" => "text/html; charset=utf-8",
       "Cache-Control" => "max-age=0, private, must-revalidate"
     }
-    #config.action_controller.raise_on_open_redirects = false
+
+    # In questo modo blocco tutto ciò che non è consentito.
+    # Poi se volglio concedere una redirect posso aggiungere allow_other_host: true
+    config.action_controller.raise_on_open_redirects = true
   end
 
   def self.production(config)

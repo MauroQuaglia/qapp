@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root(to: "home#index")
 
-  resources(:authors, only: :index)
+  resources(:authors)
 
   # basta debug controller
   namespace(:debug) do

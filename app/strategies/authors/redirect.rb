@@ -5,6 +5,6 @@ class Authors::Redirect < SimpleDelegator
   end
 
   def execute
-    redirect_to(route.redirect, status: :moved_permanently)
+    redirect_to(route.redirect, allow_other_host: true, status: :moved_permanently)
   end
 end
