@@ -8,6 +8,10 @@ class Routing::Authors::IndexRoute < Routing::RouteBase
     true
   end
 
+  def id
+    @params['id']
+  end
+
   def redirect
     @params['url']
   end
