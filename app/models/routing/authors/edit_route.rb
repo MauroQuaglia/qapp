@@ -1,4 +1,4 @@
-class Routing::Authors::ShowRoute < Routing::RouteBase
+class Routing::Authors::EditRoute < Routing::RouteBase
   attr_reader :id
 
   def initialize(params)

@@ -1,7 +1,7 @@
-class Authors::NotFound < SimpleDelegator
+class Authors::Index::NotFound < SimpleDelegator
 
   def applicable?
-    !author(route.id).present?
+    authors.empty?
   end
 
   def execute

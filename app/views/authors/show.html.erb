@@ -1,3 +1,4 @@
-<p class="title">
-  Autore: <%= author.name %>
-</p>
+<h1><%= author.name %></h1>
+<% author.books.each do |book| %>
+  <div><%= book.title %></div>
+<% end %>

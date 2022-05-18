@@ -1,0 +1,2 @@
+Actions on database records are usually guided not by REST principles, but by CRUD.
+CRUD is an abbreviation of Create, Read, Update, Delete, the four basic functions of persistent storage.

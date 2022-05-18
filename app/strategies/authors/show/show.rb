@@ -1,4 +1,4 @@
-class Authors::Show < SimpleDelegator
+class Authors::Show::Show < SimpleDelegator
 
   def applicable?
     author(route.id).present?

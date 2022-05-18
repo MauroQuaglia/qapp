@@ -1,10 +1,9 @@
-<p class="title">
-  Autori
-</p>
-
-<% authors.each do |author| %>
-  <span>Autore: <%= author.name %></span>
-  <% author.books.each do |book| %>
-    <div>Libro: <%= book.title %></div>
+<h1>Autori</h1>
+<ul>
+  <% authors.each do |author| %>
+    <li>
+      <%= link_to(author.name, author) %>
+    </li>
   <% end %>
-<% end %>
+</ul>
+<%= link_to('Aggiungi', new_author_path) %>

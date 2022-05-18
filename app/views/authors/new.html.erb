@@ -1,9 +1,15 @@
-<%= form_for(@author) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%#= f.label :date_of_birth %>
-  <%#= f.date_select :date_of_birth %>
-  <%= f.label :nationality %>
-  <%= f.text_field :nationality %>
-  <%= f.submit "Create" %>
+<h1>Nuovo Autore</h1>
+
+<%= form_with(model: @author) do |form| %>
+  <div>
+    <%= form.label(:name) %><br>
+    <%= form.text_field(:name) %>
+  </div>
+  <div>
+    <%= form.label(:nationality) %><br>
+    <%= form.text_area(:nationality) %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
 <% end %>
