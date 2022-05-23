@@ -1,4 +1,4 @@
-class Authors::Index::NotFound < SimpleDelegator
+class AuthorsNotFoundStrategy < SimpleDelegator
 
   def applicable?
     authors.empty?

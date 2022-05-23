@@ -1,4 +1,4 @@
-module Routing::Validator
+module Validator
 
   def is_integer?(value)
     true if Integer(value) rescue false

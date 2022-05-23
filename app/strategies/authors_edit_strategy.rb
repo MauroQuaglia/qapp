@@ -1,4 +1,4 @@
-class Authors::Edit::Edit < SimpleDelegator
+class AuthorsEditStrategy < SimpleDelegator
 
   def applicable?
     author(route.id).present?

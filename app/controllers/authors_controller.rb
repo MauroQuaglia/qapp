@@ -6,18 +6,18 @@ class AuthorsController < ApplicationController
   # Display all authors.
   # GET http://localhost:3000/authors
   def index
-    call_strategies([::Authors::Index::NotFound, ::Authors::Index::Index])
+    call_strategies([AuthorsNotFoundStrategy, AuthorsIndexStrategy])
   end
 
   # Displays a specific author.
   # GET http://localhost:3000/authors/:id
   def show
     permitted_params = params.permit(:id)
-    @route = Routing::Authors::ShowRoute.new(permitted_params)
+    @route = AuthorsRoute.new(permitted_params)
 
     return render(plain: 'Bad Request!', status: :bad_request) if !route.valid?
 
-    call_strategies([::Authors::Show::NotFound, ::Authors::Show::Show])
+    call_strategies([AuthorsNotFoundStrategy, AuthorsShowStrategy])
   end
 
   # Returns an HTML form for creating a new author
@@ -42,11 +42,11 @@ class AuthorsController < ApplicationController
   # GET http://localhost:3000/authors/:id/edit
   def edit
     permitted_params = params.permit(:id)
-    @route = Routing::Authors::EditRoute.new(permitted_params)
+    @route = AuthorsRoute.new(permitted_params)
 
     return render(plain: 'Bad Request!', status: :bad_request) if !route.valid?
 
-    call_strategies([::Authors::Edit::NotFound, ::Authors::Edit::Edit])
+    call_strategies([AuthorsNotFoundStrategy, AuthorsEditStrategy])
   end
 
   # Updates a specific author.

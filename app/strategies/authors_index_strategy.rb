@@ -1,4 +1,4 @@
-class Authors::Index::Index < SimpleDelegator
+class AuthorsIndexStrategy < SimpleDelegator
 
   def applicable?
     authors.present?
