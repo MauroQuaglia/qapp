@@ -2,3 +2,8 @@
 <% author.books.each do |book| %>
   <div><%= book.title %></div>
 <% end %>
+
+<ul>
+  <li><%= link_to "Edit", edit_author_path(author) %></li>
+  <li><%= link_to 'Delete', author_path(author), data: { method: :delete } %></li>
+</ul>

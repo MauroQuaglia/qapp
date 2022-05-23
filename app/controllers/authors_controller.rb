@@ -23,7 +23,7 @@ class AuthorsController < ApplicationController
   # Returns an HTML form for creating a new author
   # GET http://localhost:3000/authors/new
   def new
-    @author = Author.new
+    call_strategies([AuthorsNewStrategy])
   end
 
   # Creates a new author.
@@ -52,11 +52,25 @@ class AuthorsController < ApplicationController
   # Updates a specific author.
   # PATCH/PUT http://localhost:3000/authors/:id
   def update
+    permitted_params = params.require(:author).permit(:name, :date_of_birth, :nationality)
+    @route = AuthorsRoute.new(params)
+    @author = author(@route.id)
+
+    if @author.update(permitted_params)
+      redirect_to @author
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   # Deletes a specific author.
   # DELETE http://localhost:3000/authors/:id
   def destroy
+    permitted_params = params.permit(:id)
+    @route = AuthorsRoute.new(permitted_params)
+
+    @author = author(@route.id)
+    @author.destroy
   end
 
   def route

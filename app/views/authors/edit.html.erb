@@ -1,1 +1,15 @@
-edit!
+<h1>Modifica Autore</h1>
+
+<%= form_with(model: author) do |form| %>
+  <div>
+    <%= form.label(:name) %><br>
+    <%= form.text_field(:name) %>
+  </div>
+  <div>
+    <%= form.label(:nationality) %><br>
+    <%= form.text_area(:nationality) %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
