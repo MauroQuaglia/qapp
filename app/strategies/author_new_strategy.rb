@@ -1,4 +1,4 @@
-class AuthorsNewStrategy < SimpleDelegator
+class AuthorNewStrategy < SimpleDelegator
 
   def applicable?
     true

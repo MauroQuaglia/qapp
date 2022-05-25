@@ -33,3 +33,11 @@ LOAD_PATH = AutoloadPAth + gemme
  "/home/xpuser/mauro-quaglia/qapp/app/strategies"] + gemme
 
 
+ --------------------
+ # https://www.oreilly.com/library/view/restful-rails-development/9781491910849/ch04.html
+   # https://guides.rubyonrails.org/form_helpers.html
+   # https://guides.rubyonrails.org/getting_started.html
+#<ActionController::Parameters {"controller"=>"authors", "action"=>"show", "id"=>"1"}
+    # permitted: false> (RuntimeError)
+
+

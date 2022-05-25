@@ -1,7 +1,7 @@
 class AuthorsIndexStrategy < SimpleDelegator
 
   def applicable?
-    authors.present?
+    !authors.empty?
   end
 
   def execute

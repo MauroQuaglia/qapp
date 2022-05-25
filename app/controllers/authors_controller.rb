@@ -1,7 +1,4 @@
 class AuthorsController < ApplicationController
-  # https://www.oreilly.com/library/view/restful-rails-development/9781491910849/ch04.html
-  # https://guides.rubyonrails.org/form_helpers.html
-  # https://guides.rubyonrails.org/getting_started.html
 
   # Display all authors.
   # GET http://localhost:3000/authors
@@ -12,24 +9,23 @@ class AuthorsController < ApplicationController
   # Displays a specific author.
   # GET http://localhost:3000/authors/:id
   def show
-    permitted_params = params.permit(:id)
-    @route = AuthorsRoute.new(permitted_params)
+    @route = AuthorsRoute.new(params.permit(:id))
 
-    return render(plain: 'Bad Request!', status: :bad_request) if !route.valid?
+    return render(plain: 'Bad Request!', status: :bad_request) if !@route.valid?
 
-    call_strategies([AuthorsNotFoundStrategy, AuthorsShowStrategy])
+    call_strategies([AuthorNotFoundStrategy, AuthorShowStrategy])
   end
 
   # Returns an HTML form for creating a new author
   # GET http://localhost:3000/authors/new
   def new
-    call_strategies([AuthorsNewStrategy])
+    call_strategies([AuthorNewStrategy])
   end
 
   # Creates a new author.
   # POST http://localhost:3000/authors
   def create
-    permitted_params = params.require(:author).permit(:name, :date_of_birth, :nationality)
+    permitted_params = params.require(:author).permit(:name, :nationality)
     @author = Author.new(permitted_params)
     if @author.save
       redirect_to @author
@@ -41,48 +37,44 @@ class AuthorsController < ApplicationController
   # Returns an HTML form for editing a author.
   # GET http://localhost:3000/authors/:id/edit
   def edit
-    permitted_params = params.permit(:id)
-    @route = AuthorsRoute.new(permitted_params)
+    @route = AuthorsRoute.new(params.permit(:id))
 
-    return render(plain: 'Bad Request!', status: :bad_request) if !route.valid?
+    return render(plain: 'Bad Request!', status: :bad_request) if !@route.valid?
 
-    call_strategies([AuthorsNotFoundStrategy, AuthorsEditStrategy])
+    call_strategies([AuthorNotFoundStrategy, AuthorEditStrategy])
   end
 
   # Updates a specific author.
   # PATCH/PUT http://localhost:3000/authors/:id
   def update
-    permitted_params = params.require(:author).permit(:name, :date_of_birth, :nationality)
-    @route = AuthorsRoute.new(params)
-    @author = author(@route.id)
+    @route = AuthorsRoute.new(params.permit(:id))
 
-    if @author.update(permitted_params)
-      redirect_to @author
+    return render(plain: 'Bad Request!', status: :bad_request) if !@route.valid?
+
+    permitted_params = params.require(:author).permit(:name, :nationality)
+    if author.update(permitted_params)
+      redirect_to author
     else
       render :edit, status: :unprocessable_entity
     end
   end
 
-  # Deletes a specific author.
+  # Deletes a specific author. Bug di Rails 7...
   # DELETE http://localhost:3000/authors/:id
   def destroy
-    permitted_params = params.permit(:id)
-    @route = AuthorsRoute.new(permitted_params)
+    @route = AuthorsRoute.new(params.permit(:id))
 
-    @author = author(@route.id)
-    @author.destroy
-  end
+    return render(plain: 'Bad Request!', status: :bad_request) if !@route.valid?
 
-  def route
-    @route
+    author.destroy
   end
 
   def authors
     Author.all
   end
 
-  def author(id)
-    Author.find_by(id: id)
+  def author
+    Author.find_by(id: @route.id)
   end
 
 end
