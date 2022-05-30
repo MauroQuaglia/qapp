@@ -15,7 +15,9 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/400', to: 'errors#bad_request'
-  get '/500', to: 'errors#internal_server_error'
-  get '*path', to: 'errors#not_found'
+  get '/404', to: 'application#not_found'
+  get '/400', to: 'application#bad_request'
+  get '/500', to: 'application#internal_server_error'
+
+  get '*path', to: 'application#not_found'
 end

@@ -11,7 +11,7 @@ class AuthorsController < ApplicationController
   def show
     @route = AuthorsRoute.new(params.permit(:id))
 
-    return render(plain: 'Bad Request!', status: :bad_request) if !@route.valid?
+    return bad_request if !@route.valid?
 
     call_strategies([AuthorNotFoundStrategy, AuthorShowStrategy])
   end

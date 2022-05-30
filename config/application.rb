@@ -30,6 +30,9 @@ Bundler.require(*Rails.groups)
 module Qapp
   # https://guides.rubyonrails.org/configuring.html#versioned-default-values
   class Application < Rails::Application
+    # For enable /404 /500 custom page
+    config.exceptions_app = routes
+
     [Gem::Railties, Gem::Actionpack].each { |gem| gem.application(config) }
   end
 end
