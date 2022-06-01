@@ -1,8 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @text = 'My QApp'
-    @authors = Author.all
+    GoogleBotIpService.call('https://www.gstatic.com/ipranges/goog.json')
   end
 
 end

@@ -1,18 +1,3 @@
-<p class="title">
-  <%= @text %>
-</p>
-
-<p>
-  cache: <%= Rails.cache.fetch('mq', expires_in: 2.hours) { Time.now } %>
-</p>
-
-<% @authors.each do |author| %>
-  <span>Author: <%= author.name %></span>
-  <% author.books.each do |book| %>
-    <div>doc: <%= book.title %></div>
-  <% end %>
-<% end %>
-
 <div>
   <%= image_tag('home/mr_q.png', alt: 'MQ') %>
 </div>

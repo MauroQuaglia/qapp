@@ -8,7 +8,7 @@ gem 'uglifier'
 gem 'pg'
 gem 'active_model_serializers'
 gem 'pagy'
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem 'httparty'
 
 
 group(:test) do
