@@ -1,3 +1,7 @@
 <div>
   <%= image_tag('home/mr_q.png', alt: 'MQ') %>
 </div>
+
+<% @google_bot_ip_repository.all.each do |gbi| %>
+  <div><%= gbi.to_s %></div>
+<% end %>
