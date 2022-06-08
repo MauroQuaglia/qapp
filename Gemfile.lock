@@ -256,3 +256,6 @@ DEPENDENCIES
   sass-rails
   selenium-webdriver
   uglifier
+
+BUNDLED WITH
+   2.3.7

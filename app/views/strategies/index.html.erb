@@ -1,0 +1,11 @@
+<% if @strategy.present? %>
+  <h2 class="page_type_section">Tipi di Strategie</h2>
+  <div class="page_type">
+    <p>
+      <strong><%= @strategy[:strategy_name] %></strong>
+    </p>
+    <p>
+      <%= link_to @strategy[:request_url], @strategy[:request_url], target: '_blank' %>
+    </p>
+  </div>
+<% end %>
