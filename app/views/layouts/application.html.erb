@@ -6,8 +6,8 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag(params[:controller]) %>
-  <%= javascript_include_tag(params[:controller]) %>
+  <%= stylesheet_include_tag_if_exists(params[:controller]) %>
+  <%= javascript_include_tag_if_exists(params[:controller]) %>
 </head>
 
 <body>

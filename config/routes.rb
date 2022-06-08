@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root(to: "home#index")
   get('/alive', to: 'alive#show')
+  get('/strategies', to: 'strategies#index')
 
   resources(:authors)
 

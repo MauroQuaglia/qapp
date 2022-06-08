@@ -23,8 +23,8 @@ class Gem::Actionpack
   end
 
   def self.development(config)
-    config.action_controller.perform_caching = false
-    config.cache_store = :null_store
+    config.action_controller.perform_caching = true
+    config.cache_store = :memory_store
     config.public_file_server.enabled = true
   end
 

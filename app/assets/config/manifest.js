@@ -4,6 +4,4 @@
 //= link home.js
 //= link authors.css
 //= link authors.js
-//= link errors.css
-//= link errors.js
 //= link home/mr_q.png
