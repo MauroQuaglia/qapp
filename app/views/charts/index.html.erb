@@ -1,0 +1,5 @@
+<h3>Autori: <%= @total %></h3>
+
+<h2>Andamento iscrizioni</h2>
+<%= column_chart(@daily, library: { elements: { point: { radius: 0.5 } } }) %>
+

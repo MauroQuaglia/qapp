@@ -1,9 +1,0 @@
-<h3>
-  <%= @total %>
-</h3>
-
-<h2>Annuale</h2>
-<%= line_chart(@daily, library: { elements: { point: { radius: 0.5 } } }) %>
-
-<h2>Storico</h2>
-<%= column_chart(@monthly) %>
