@@ -9,6 +9,8 @@ gem 'pg'
 gem 'active_model_serializers'
 gem 'pagy'
 gem 'httparty'
+gem 'chartkick'
+gem 'groupdate'
 
 
 group(:test) do

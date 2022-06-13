@@ -35,4 +35,5 @@ module Qapp
 
     [Gem::Railties, Gem::Actionpack].each { |gem| gem.application(config) }
   end
+
 end
