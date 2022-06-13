@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails'
+gem 'rails_admin'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
@@ -20,3 +21,4 @@ group(:test) do
   gem('geckodriver-helper')
   gem('db-query-matchers')
 end
+gem "sassc-rails"
