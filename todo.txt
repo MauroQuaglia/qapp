@@ -41,3 +41,7 @@ LOAD_PATH = AutoloadPAth + gemme
     # permitted: false> (RuntimeError)
 
 
+-------------------------------------------
+* Capire come e se ci servono i vari defined?
+
+https://github.com/railsadminteam/rails_admin/wiki/Authentication

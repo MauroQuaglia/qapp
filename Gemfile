@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails'
 gem 'rails_admin'
+gem 'devise'
+gem 'terser'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
@@ -13,7 +15,6 @@ gem 'httparty'
 gem 'chartkick'
 gem 'groupdate'
 
-
 group(:test) do
   gem('rspec-rails')
   gem('capybara')
@@ -21,4 +22,3 @@ group(:test) do
   gem('geckodriver-helper')
   gem('db-query-matchers')
 end
-gem "sassc-rails"
