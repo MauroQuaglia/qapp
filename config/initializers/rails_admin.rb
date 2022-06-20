@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
   config.asset_source = :sprockets
+  config.main_app_name = %w[QApp BackOffice]
 
   ### Popular gems integration
 
@@ -24,9 +25,10 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   config.show_gravatar = false
 
+  # Sono le azioni che puoi fare dal RailsAdmin
   config.actions do
-    dashboard # mandatory
-    index # mandatory
+    dashboard # mandatory - Se la tolgo non vedo nulla
+    index # mandatory - Se la tolgo non vedo i modelli
     new
     export
     bulk_delete
@@ -39,4 +41,11 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+  # La parte delle strategie e di quelle pagine può essere messa anche qui volendo: https://github.com/railsadminteam/rails_admin/wiki/Actions
+  # tipo se voglio invalidare una cache deve per forza andare qua sotto
+  #
+  # Si può mettere un bel wysywyg di rails 6/7 il https://github.com/railsadminteam/rails_admin/wiki/ActionText MA visto che serve webpacher lasciamo stare.
+  #
+  #
+  # sui modelli si può fare eager_loading per evitare troope query https://github.com/railsadminteam/rails_admin/wiki/Associations-basics
 end
