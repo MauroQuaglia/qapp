@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails'
 gem 'rails_admin'
-gem 'devise'
 gem 'terser'
 gem 'puma'
 gem 'sass-rails'

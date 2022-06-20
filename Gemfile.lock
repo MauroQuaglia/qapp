@@ -147,7 +147,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
-    minitest (5.15.0)
+    minitest (5.16.0)
     multi_xml (0.6.0)
     nested_form (0.3.2)
     net-imap (0.2.3)
@@ -170,7 +170,7 @@ GEM
     orm_adapter (0.5.0)
     pagy (5.10.1)
       activesupport
-    pg (1.3.5)
+    pg (1.4.0)
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
@@ -306,6 +306,3 @@ DEPENDENCIES
   selenium-webdriver
   terser
   uglifier
-
-BUNDLED WITH
-   2.3.15
